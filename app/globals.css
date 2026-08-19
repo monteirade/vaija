@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/*
+  Direção visual Vai Já (secção 2 da especificação):
+  fundo escuro + amarelo fluorescente do logo + elementos limpos e
+  funcionais. Sistema de design deliberadamente simples nesta fase, mas
+  centralizado aqui para ser fácil de alterar mais tarde.
+*/
+
+:root {
+  --background: #0a0a0b;
+  --surface: #16161a;
+  --surface-2: #1f1f24;
+  --border: #2a2a30;
+  --foreground: #f5f5f7;
+  --muted-foreground: #a1a1aa;
+  --brand-yellow: #e7ff3c;
+  --brand-yellow-foreground: #0a0a0b;
+  --danger: #ff5c5c;
+  --success: #3ddc84;
+  --warning: #ffb020;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-yellow-foreground: var(--brand-yellow-foreground);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: var(--brand-yellow);
+  color: var(--brand-yellow-foreground);
+}
